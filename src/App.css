@@ -39,8 +39,6 @@
   
   .app__posts {
     display: flex;
-    padding-top: 20px;
-    padding-left: 500px;
     background-color: rgb(0, 0, 0);
   }
   
