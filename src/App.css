@@ -39,6 +39,8 @@
   
   .app__posts {
     display: flex;
+    padding-top: 20px;
+    padding-left: 500px;
     background-color: rgb(0, 0, 0);
   }
   
@@ -123,4 +125,11 @@
     font-size: medium;
     display: inline-block;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .app__posts {
+      padding-top: 0; /* Remove padding-top for mobile */
+      padding-left: 0; /* Remove padding-left for mobile */
+    }
   }
