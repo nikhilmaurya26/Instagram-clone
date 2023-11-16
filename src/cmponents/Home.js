@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react'
 import logo from "../images/download.jpeg";
 import Button from '@mui/material/Button';
 import { makeStyles } from '@mui/styles';
-import { Input, Modal, TextField } from '@mui/material';
-// import Input from '@mui/material';
+import { Input, Modal } from '@mui/material';
 import { db, auth } from '../firebase';
 import 'firebase/compat/auth';
-import { Edit } from '@mui/icons-material';
 import Posts from './Posts';
 import AddPost from './AddPost';
 
