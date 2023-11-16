@@ -1,0 +1,18 @@
+[debug] [2023-11-16T18:52:32.900Z] ----------------------------------------------------------------------
+[debug] [2023-11-16T18:52:32.905Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-11-16T18:52:32.906Z] CLI Version:   12.9.1
+[debug] [2023-11-16T18:52:32.907Z] Platform:      win32
+[debug] [2023-11-16T18:52:32.907Z] Node Version:  v18.17.1
+[debug] [2023-11-16T18:52:32.909Z] Time:          Fri Nov 17 2023 00:22:32 GMT+0530 (India Standard Time)
+[debug] [2023-11-16T18:52:32.909Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-16T18:52:32.935Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[debug] [2023-11-16T18:52:33.821Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-11-16T18:52:33.822Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=490166285&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
