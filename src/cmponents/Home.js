@@ -7,6 +7,7 @@ import { db, auth } from '../firebase';
 import 'firebase/compat/auth';
 import Posts from './Posts';
 import AddPost from './AddPost';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -46,6 +47,9 @@ const Home = () => {
 
     const [posts, setposts] = useState([]);
 
+    const navigate = useNavigate();
+
+    
 
     const signUp = (event) => {
         event.preventDefault();
@@ -71,6 +75,16 @@ const Home = () => {
         // window.location.reload(false);
     };
 
+    const handleSignOut = () => {
+        auth.signOut()
+            .then(() => {
+                navigate('/'); // Navigate to the home page on sign-out
+            })
+            .catch((error) => {
+                // Handle sign-out errors
+                console.error('Sign-out error:', error);
+            });
+    };
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -184,8 +198,9 @@ const Home = () => {
                     width={'180'}
                     height={'50'}
                 />
+               <h2> Welcome {user.displayName}</h2>
                 {user ? (
-                    <Button variant="contained" color='primary' onClick={() => auth.signOut()}>Logout</Button>
+                    <Button variant="contained" color='primary' onClick={handleSignOut}>Logout</Button>
                 ) : (
                     <div>
                         <Button variant="contained" color='primary' disableElevation onClick={() => setOpensignin(true)}>Sign In</Button>
@@ -202,7 +217,7 @@ const Home = () => {
                     <AddPost username={user.displayName} />
                 </>
             ) : (
-                <div className='unauth'>
+                <div className='unauth' style={{color:'white'}} >
                     Please <b onClick={() => setOpensignin(true)} style={{ cursor: 'pointer', color: 'Blue' }}>Login</b>/<b onClick={() => setOpen(true)} style={{ cursor: 'pointer', color: 'Blue' }}>Register</b> to Add New Post
                 </div>
             )}

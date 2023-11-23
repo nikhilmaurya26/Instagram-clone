@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { db, storage } from "../firebase";
-import { TextField,Button } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import firebase from "firebase/compat/app";
 import 'firebase/compat/firestore'
 import 'firebase/compat/storage'
@@ -15,6 +15,13 @@ function AddPost({ username }) {
         if (e.target.files[0]) {
             setImage(e.target.files[0]);
         }
+    };
+
+    const inputStyle = {
+        background: '#121212;', // Custom background color
+        color: 'white', // Custom text color
+        borderRadius: '5px', // Other styles as needed
+        // Add any other styles you want for the Input component
     };
 
     const handleUpload = () => {
@@ -57,9 +64,12 @@ function AddPost({ username }) {
             <h2 style={{ textAlign: 'center', margin: '15px' }}>Add New post</h2>
 
 
-            <input className='file-input' type="file" onChange={handleChange} />
+            <input className='file-input' type="file" onChange={handleChange} InputProps={{
+                style: inputStyle, // Apply custom styles to Input component
+            }}
+            />
             <br />
-            <TextField id="filled-basic" label="Caption here" variant="filled" onChange={event => setCaption(event.target.value)} value={caption} />
+            <TextField className="" style={{background:'white'}} id="filled-basic" label="Caption here" variant="filled" onChange={event => setCaption(event.target.value)} value={caption} />
             <br />
 
             < progress className="progress" value={progress} max="100" />
